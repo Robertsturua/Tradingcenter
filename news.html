@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Trading Centre — World & Markets News</title>
+  <meta name="description" content="Auto-updating world and markets headlines via RSS (reference only)." />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <div class="topbar fullbleed">
+    <div class="container row">
+      <div class="pill"><span class="dot"></span> News relay: active</div>
+
+      </div>
+    </div>
+  </div>
+
+  <header class="container">
+    <div class="brand">
+      <div class="logo" aria-hidden="true">
+        <svg viewBox="0 0 64 64" fill="none">
+          <circle cx="32" cy="32" r="22" stroke="white" stroke-width="3" opacity=".9"/>
+          <path d="M12 32h40" stroke="white" stroke-width="3" opacity=".85"/>
+          <path d="M32 10c7 6 7 38 0 44" stroke="white" stroke-width="3" opacity=".85"/>
+        </svg>
+      </div>
+      <div>
+        <h1>Trading Centre</h1>
+        <p class="sub">World & Markets News Relay — external RSS headlines for reference.</p>
+      </div>
+    </div>
+
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="directory.html">Directory</a>
+      <a href="withdrawals.html">Withdrawals</a>
+      <a href="bulletins.html">Bulletins</a>
+      <a class="active" href="news.html">News</a>
+      <a href="resources.html">Resources</a>
+      <a href="about.html">About</a>
+    </nav>
+
+    <div class="breadcrumbs">You are here: <a href="index.html">Home</a> / <strong>News</strong></div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="inner">
+        <div class="media">
+          <div class="photo">
+            <img alt="Newsroom" src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1600&q=70">
+            <div class="cap">External RSS relay • ref: <code>TC/NEWS/RELAY</code></div>
+          </div>
+
+          <div class="card">
+            <div class="hd">
+              <h3>Status</h3>
+              <div class="small">Headlines update automatically when the page loads.</div>
+            </div>
+            <div class="bd">
+              <div class="notice" style="border-left:4px solid #0a3a84;">
+                <div class="title" style="margin-top:0">How it works</div>
+                <p class="desc">
+                  This page pulls headlines from external RSS sources. Links open in a new tab.
+                  If RSS is temporarily unavailable, internal notices are shown instead.
+                </p>
+              </div>
+              <hr/>
+              <div class="small"><strong id="newsStatus">Initializing…</strong></div>
+              <div class="small" style="margin-top:8px">
+                For a “live system” feel in your scene, refresh once; the status line changes.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="hd">
+        <h3>Latest headlines</h3>
+        <div class="small">External sources (opens new tab).</div>
+      </div>
+      <div class="bd">
+        <div id="newsList" class="list"></div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+
+        <div class="footer-top">
+          <div class="footer-contacts">
+            Support: <a href="mailto:support@trading-center.me">support@trading-center.me</a> •
+            Compliance: <a href="mailto:compliance@trading-center.me">compliance@trading-center.me</a>
+          </div>
+          <div class="small">Referenced institutions / market infrastructure (informational)</div>
+        </div>
+
+        <div class="ticker" aria-label="Referenced institutions logo ticker">
+          <div class="ticker-track">
+            <span class="ticker-item"><img alt="Visa" src="https://commons.wikimedia.org/wiki/Special:FilePath/Visa%202021.svg"></span>
+            <span class="ticker-item"><img alt="Mastercard" src="https://commons.wikimedia.org/wiki/Special:FilePath/Mastercard%202019%20logo.svg"></span>
+            <span class="ticker-item"><img alt="SWIFT" src="https://commons.wikimedia.org/wiki/Special:FilePath/SWIFT%202021%20logo.svg"></span>
+            <span class="ticker-item"><img alt="PayPal" src="https://commons.wikimedia.org/wiki/Special:FilePath/PayPal.svg"></span>
+            <span class="ticker-item"><img alt="Stripe" src="https://commons.wikimedia.org/wiki/Special:FilePath/Stripe%20Logo,%20revised%202016.svg"></span>
+            <span class="ticker-item"><img alt="Reuters" src="https://commons.wikimedia.org/wiki/Special:FilePath/Reuters%20Logo.svg"></span>
+            <span class="ticker-item"><img alt="Bloomberg" src="https://commons.wikimedia.org/wiki/Special:FilePath/Bloomberg%20logo.svg"></span>
+            <span class="ticker-item"><img alt="CoinMarketCap" src="https://commons.wikimedia.org/wiki/Special:FilePath/Coinmarketcap%20svg%20logo.svg"></span>
+
+            <span class="ticker-item"><img alt="Visa" src="https://commons.wikimedia.org/wiki/Special:FilePath/Visa%202021.svg"></span>
+            <span class="ticker-item"><img alt="Mastercard" src="https://commons.wikimedia.org/wiki/Special:FilePath/Mastercard%202019%20logo.svg"></span>
+            <span class="ticker-item"><img alt="SWIFT" src="https://commons.wikimedia.org/wiki/Special:FilePath/SWIFT%202021%20logo.svg"></span>
+            <span class="ticker-item"><img alt="PayPal" src="https://commons.wikimedia.org/wiki/Special:FilePath/PayPal.svg"></span>
+            <span class="ticker-item"><img alt="Stripe" src="https://commons.wikimedia.org/wiki/Special:FilePath/Stripe%20Logo,%20revised%202016.svg"></span>
+            <span class="ticker-item"><img alt="Reuters" src="https://commons.wikimedia.org/wiki/Special:FilePath/Reuters%20Logo.svg"></span>
+            <span class="ticker-item"><img alt="Bloomberg" src="https://commons.wikimedia.org/wiki/Special:FilePath/Bloomberg%20logo.svg"></span>
+            <span class="ticker-item"><img alt="CoinMarketCap" src="https://commons.wikimedia.org/wiki/Special:FilePath/Coinmarketcap%20svg%20logo.svg"></span>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div>© Trading Centre — Compliance Information Service</div>
+          <div>Build: <code>TC-OPS-REL-2409.17</code></div>
+        </div>
+
+      </div>
+    </footer>
+  </main>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>

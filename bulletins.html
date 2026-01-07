@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Trading Centre — Bulletins & Procedural Notices</title>
+  <meta name="description" content="Procedural bulletins, advisories, and technical notices relating to transaction integrity and withdrawal clearance." />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <div class="topbar fullbleed">
+    <div class="container row">
+      <div class="pill"><span class="dot"></span> Bulletins feed: active</div>
+
+      </div>
+    </div>
+  </div>
+
+  <header class="container">
+    <div class="brand">
+      <div class="logo" aria-hidden="true">
+        <svg viewBox="0 0 64 64" fill="none">
+          <circle cx="32" cy="32" r="22" stroke="white" stroke-width="3" opacity=".9"/>
+          <path d="M12 32h40" stroke="white" stroke-width="3" opacity=".85"/>
+          <path d="M32 10c7 6 7 38 0 44" stroke="white" stroke-width="3" opacity=".85"/>
+        </svg>
+      </div>
+      <div>
+        <h1>Trading Centre</h1>
+        <p class="sub">Bulletins & Notices — procedural advisories for transaction security and clearance integrity.</p>
+      </div>
+    </div>
+
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="directory.html">Directory</a>
+      <a href="withdrawals.html">Withdrawals</a>
+      <a class="active" href="bulletins.html">Bulletins</a>
+      <a href="news.html">News</a>
+      <a href="resources.html">Resources</a>
+      <a href="about.html">About</a>
+    </nav>
+
+    <div class="breadcrumbs">You are here: <a href="index.html">Home</a> / <strong>Bulletins</strong></div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="inner">
+        <div class="media">
+          <div class="photo">
+            <img alt="Compliance documents" src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1600&q=70">
+            <div class="cap">Public procedural notices • ref: <code>TC/BUL/INDEX</code></div>
+          </div>
+
+          <div class="card">
+            <div class="hd">
+              <h3>Bulletin overview</h3>
+              <div class="small">Technical language used for consistency across jurisdictions.</div>
+            </div>
+            <div class="bd">
+              <p class="lead">
+                Bulletins summarise operating expectations for trading entities, including withdrawal sequencing controls,
+                beneficiary verification standards, and settlement readiness assessments. Notices are written in a formal,
+                cross-jurisdictional format to support consistent application across varied transactional infrastructures.
+              </p>
+
+              <div class="notice" style="border-left:4px solid #0a3a84;">
+                <div class="title" style="margin-top:0">Monitoring and record basis</div>
+                <p class="desc">
+                  Observations may be generated from timing anomalies, routing inconsistencies, mismatch between declared liquidity capacity and
+                  observed withdrawal throughput, or repeated destination changes across client requests.
+                </p>
+              </div>
+
+              <div class="notice" style="margin-top:10px;border-left:4px solid #0c6aa6;">
+                <div class="title" style="margin-top:0">Where to look next</div>
+                <p class="desc">
+                  For detailed clearance steps, see <a href="withdrawals.html">Withdrawals</a>. For external market context, see <a href="news.html">News</a>.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <section class="card" style="margin-top:16px">
+          <div class="hd">
+            <h3>Recent notices</h3>
+            <div class="small">Most recent entries are shown first.</div>
+          </div>
+          <div class="bd">
+            <div class="list">
+
+              <div class="notice">
+                <div class="date">29 Dec 2025 • Advisory • ref: <code>TC/BUL-2025-12-29A</code></div>
+                <div class="title">Settlement sequencing controls during volatility</div>
+                <p class="desc">
+                  Entities should apply transaction sequencing controls where large withdrawal volumes occur during elevated volatility.
+                  Sequencing should preserve clearing-cycle integrity and reduce partial settlement risk. Where destination details are amended,
+                  beneficiary verification must be re-run prior to release.
+                </p>
+              </div>
+
+              <div class="notice">
+                <div class="date">12 Nov 2025 • Notice • ref: <code>TC/BUL-2025-11-12B</code></div>
+                <div class="title">Domain impersonation and misrepresented contact details</div>
+                <p class="desc">
+                  Observed incidents include look-alike domains and mismatched support contact details. Entities must ensure public-facing identifiers
+                  remain consistent across statements and client communications. Where discrepancies are reported, enhanced verification may be required
+                  before withdrawals proceed.
+                </p>
+              </div>
+
+              <div class="notice">
+                <div class="date">03 Oct 2025 • Procedure • ref: <code>TC/BUL-2025-10-03C</code></div>
+                <div class="title">Counterparty exposure review and reserve adequacy</div>
+                <p class="desc">
+                  Counterparty exposure review should confirm that withdrawal execution does not breach reserve ratios or reduce operational solvency
+                  buffers below declared thresholds. Entities using pooled liquidity structures should document reserve attribution and settlement pathway
+                  readiness.
+                </p>
+              </div>
+
+              <div class="notice" style="border-left:4px solid #8a4b00;">
+                <div class="date">Annex • ref: <code>TC/ANNEX-LVP</code></div>
+                <div class="title">Liquidity Verification Protocol (LVP) — summary</div>
+                <p class="desc">
+                  Liquidity Verification confirms cleared liquidity availability prior to release. Where applied, entities may be instructed to complete
+                  additional verification elements as part of clearance sequencing. See <a href="withdrawals.html">Withdrawals</a> for LVP definitions.
+                </p>
+              </div>
+
+              <div class="notice" style="border-left:4px solid #8a4b00;">
+                <div class="date">Annex • ref: <code>TC/ANNEX-IRS</code></div>
+                <div class="title">Refundable IRS Tax Clearance — operational note</div>
+                <p class="desc">
+                  For certain cross-border withdrawals, a refundable IRS tax clearance step may apply where reporting thresholds and reconciliation
+                  requirements are triggered. The refundable amount is returned to the client within five (5) business days after clearance completion.
+                </p>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+
+        <div class="footer-top">
+          <div class="footer-contacts">
+            Support: <a href="mailto:support@trading-center.me">support@trading-center.me</a> •
+            Compliance: <a href="mailto:compliance@trading-center.me">compliance@trading-center.me</a>
+          </div>
+          <div class="small">Referenced institutions / market infrastructure (informational)</div>
+        </div>
+
+        <div class="ticker" aria-label="Referenced institutions logo ticker">
+          <div class="ticker-track">
+            <span class="ticker-item"><img alt="Visa" src="https://commons.wikimedia.org/wiki/Special:FilePath/Visa%202021.svg"></span>
+            <span class="ticker-item"><img alt="Mastercard" src="https://commons.wikimedia.org/wiki/Special:FilePath/Mastercard%202019%20logo.svg"></span>
+            <span class="ticker-item"><img alt="SWIFT" src="https://commons.wikimedia.org/wiki/Special:FilePath/SWIFT%202021%20logo.svg"></span>
+            <span class="ticker-item"><img alt="PayPal" src="https://commons.wikimedia.org/wiki/Special:FilePath/PayPal.svg"></span>
+            <span class="ticker-item"><img alt="Stripe" src="https://commons.wikimedia.org/wiki/Special:FilePath/Stripe%20Logo,%20revised%202016.svg"></span>
+            <span class="ticker-item"><img alt="Reuters" src="https://commons.wikimedia.org/wiki/Special:FilePath/Reuters%20Logo.svg"></span>
+            <span class="ticker-item"><img alt="Bloomberg" src="https://commons.wikimedia.org/wiki/Special:FilePath/Bloomberg%20logo.svg"></span>
+            <span class="ticker-item"><img alt="CoinMarketCap" src="https://commons.wikimedia.org/wiki/Special:FilePath/Coinmarketcap%20svg%20logo.svg"></span>
+
+            <span class="ticker-item"><img alt="Visa" src="https://commons.wikimedia.org/wiki/Special:FilePath/Visa%202021.svg"></span>
+            <span class="ticker-item"><img alt="Mastercard" src="https://commons.wikimedia.org/wiki/Special:FilePath/Mastercard%202019%20logo.svg"></span>
+            <span class="ticker-item"><img alt="SWIFT" src="https://commons.wikimedia.org/wiki/Special:FilePath/SWIFT%202021%20logo.svg"></span>
+            <span class="ticker-item"><img alt="PayPal" src="https://commons.wikimedia.org/wiki/Special:FilePath/PayPal.svg"></span>
+            <span class="ticker-item"><img alt="Stripe" src="https://commons.wikimedia.org/wiki/Special:FilePath/Stripe%20Logo,%20revised%202016.svg"></span>
+            <span class="ticker-item"><img alt="Reuters" src="https://commons.wikimedia.org/wiki/Special:FilePath/Reuters%20Logo.svg"></span>
+            <span class="ticker-item"><img alt="Bloomberg" src="https://commons.wikimedia.org/wiki/Special:FilePath/Bloomberg%20logo.svg"></span>
+            <span class="ticker-item"><img alt="CoinMarketCap" src="https://commons.wikimedia.org/wiki/Special:FilePath/Coinmarketcap%20svg%20logo.svg"></span>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div>© Trading Centre — Compliance Information Service</div>
+          <div>Build: <code>TC-OPS-REL-2409.17</code></div>
+        </div>
+
+      </div>
+    </footer>
+  </main>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>
