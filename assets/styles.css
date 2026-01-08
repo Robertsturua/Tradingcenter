@@ -281,3 +281,11 @@ h1{margin:0;font-size:20px;letter-spacing:.2px}
   font-size:12.5px;
 }
 .footer-bottom code{font-size:12px}
+/* FULLY VISIBLE IMAGE (NO CROP) */
+.photo-full img{
+  height:auto !important;
+  max-height:520px;        /* you can adjust this */
+  object-fit:contain !important;
+  background:#f5f7fb;      /* neutral background behind image */
+}
+
