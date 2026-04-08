@@ -3,30 +3,59 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Trading Centre — Resources & Market Data</title>
+  <title>Trading Center — Resources & Market Data</title>
   <meta name="description" content="Outbound resources for market data, cross-checking, and public reference." />
   <link rel="stylesheet" href="assets/styles.css" />
+  <style>
+    .hero-banner { width: 100%; border-radius: 6px; overflow: hidden; margin-bottom: 24px; box-shadow: 0 4px 12px rgba(0,57,93,0.05); border: 1px solid var(--line); position: relative; background: #002238; height: 280px; }
+    .hero-banner img { width: 100%; height: 100%; object-fit: cover; object-position: center 30%; display: block; }
+    .hero-banner .cap { position: absolute; bottom: 0; left: 0; width: 100%; padding: 12px 18px; background: rgba(0, 34, 56, 0.9); backdrop-filter: blur(4px); color: #fff; font-size: 13px; font-family: var(--mono); border-top: 1px solid rgba(255,255,255,0.1); }
+    .dark-support-banner { background: var(--ink); color: #fff; border-radius: 8px; padding: 32px; margin-top: 32px; box-shadow: 0 8px 24px rgba(0,57,93,0.15); }
+    .dark-support-banner h3 { color: #fff; margin: 0 0 8px; font-size: 20px; text-transform: uppercase; letter-spacing: 0.5px;}
+    .dark-support-banner p { color: #b0c4d6; margin: 0 0 24px; font-size: 14px;}
+    .support-grid-dark { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+    .support-card-dark { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; padding: 20px; text-align: left; }
+    .support-card-dark h4 { margin: 0 0 8px; color: var(--accent); text-transform: uppercase; font-size: 12px; letter-spacing: 0.5px; }
+    .support-card-dark div { font-family: var(--mono); font-size: 14px; font-weight: 600; color: #fff; }
+  </style>
 </head>
 <body>
   <div class="topbar fullbleed">
     <div class="container row">
       <div class="pill"><span class="dot"></span> Reference resources: online</div>
-
-      </div>
+      <div style="font-family: var(--mono); font-size: 12px; color: #fff;" data-build></div>
     </div>
   </div>
 
   <header class="container">
-    <div class="brand">
-      <div class="logo" aria-hidden="true">
-        <svg viewBox="0 0 64 64" fill="none">
-          <circle cx="32" cy="32" r="22" stroke="white" stroke-width="3" opacity=".9"/>
-          <path d="M12 32h40" stroke="white" stroke-width="3" opacity=".85"/>
-          <path d="M32 10c7 6 7 38 0 44" stroke="white" stroke-width="3" opacity=".85"/>
+    <div class="brand" style="align-items: flex-start;">
+      <div class="logo" aria-hidden="true" style="background: transparent; width: 420px; height: 90px; flex: 0 0 auto; display: block; padding: 0;">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 120" style="width: 100%; height: 100%; display: block;">
+          <defs>
+            <linearGradient id="primary" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#00aeef" />
+              <stop offset="100%" stop-color="#00395d" />
+            </linearGradient>
+            <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+              <feGaussianBlur stdDeviation="3" result="blur" />
+              <feComposite in="SourceGraphic" in2="blur" operator="over" />
+            </filter>
+          </defs>
+          <g transform="translate(10, 10)">
+            <polygon points="50,0 93.3,25 93.3,75 50,100 6.7,75 6.7,25" fill="none" stroke="url(#primary)" stroke-width="6" />
+            <polygon points="50,20 76,35 76,65 50,80 24,65 24,35" fill="url(#primary)" filter="url(#glow)" opacity="0.9" />
+            <line x1="6.7" y1="25" x2="93.3" y2="75" stroke="#ffffff" stroke-width="2" opacity="0.6" />
+            <line x1="6.7" y1="75" x2="93.3" y2="25" stroke="#ffffff" stroke-width="2" opacity="0.6" />
+            <circle cx="50" cy="50" r="8" fill="#ffffff" filter="url(#glow)" />
+          </g>
+          <g transform="translate(130, 48)" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif">
+            <text x="0" y="0" font-size="34" font-weight="900" fill="#00395d" letter-spacing="1.5">TRADING CENTER</text>
+            <text x="2" y="28" font-size="13" font-weight="800" fill="#005b82" letter-spacing="3.5">GENÈVE INTERNATIONALE</text>
+            <text x="2" y="48" font-size="11" font-weight="700" fill="#4a5c6d" letter-spacing="1.5">TIER-1 CLEARANCE &amp; SETTLEMENT</text>
+          </g>
         </svg>
       </div>
-      <div>
-        <h1>Trading Centre</h1>
+      <div style="margin-top: 10px;">
         <p class="sub">Resources — market data links and cross-check tools (external).</p>
       </div>
     </div>
@@ -40,86 +69,93 @@
       <a class="active" href="resources.html">Resources</a>
       <a href="about.html">About</a>
     </nav>
-
     <div class="breadcrumbs">You are here: <a href="index.html">Home</a> / <strong>Resources</strong></div>
   </header>
 
   <main class="container">
     <section class="hero">
       <div class="inner">
-        <div class="media">
-          <div class="photo">
-            <img alt="Market dashboards" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1600&q=70">
-            <div class="cap">Reference-only tools • ref: <code>TC/RESOURCES</code></div>
+        <div class="hero-banner">
+          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1600&q=80" alt="Market data dashboards">
+          <div class="cap">REFERENCE TOOLS • ref: <code>TC/RESOURCES</code></div>
+        </div>
+
+        <div class="grid" style="grid-template-columns: 1.2fr 0.8fr; gap: 24px;">
+          <div>
+            <div class="kicker"><strong>Due Diligence</strong> Third-Party Verification</div>
+            <h2 style="margin:0 0 12px;font-size:22px; text-transform:uppercase; color: var(--ink);">Market Cross-Check Utilities</h2>
+            <p class="lead" style="font-size: 14.5px;">
+              These resources can be used to cross-check pricing, symbols, news, and market conditions while investigating a trading entity.
+              External links open in a new tab. The Trading Center provides them as reference utilities commonly used by market participants.
+            </p>
           </div>
 
-          <div class="card">
-            <div class="hd">
-              <h3>Use case</h3>
-              <div class="small">Designed for consumer cross-checking and market awareness.</div>
-            </div>
+          <div class="card" style="height: 100%;">
             <div class="bd">
-              <p class="lead">
-                These resources can be used to cross-check pricing, symbols, news, and market conditions while investigating a trading entity.
-                External links open in a new tab. The Trading Centre provides them as reference utilities commonly used by market participants.
-              </p>
-
-              <div class="notice" style="border-left:4px solid #0a3a84;">
+              <div class="notice" style="border-left:4px solid var(--accent) !important;">
                 <div class="title" style="margin-top:0">Cross-check approach</div>
                 <p class="desc">
                   Compare the entity’s claims against independent price history, basic market facts, and public reporting.
-                  Where a withdrawal dispute exists, review the Withdrawals page for clearance terminology used in communications.
+                  Where a withdrawal dispute exists, review the <a href="withdrawals.html" style="font-weight: 600;">Withdrawals</a> page for clearance terminology used in communications.
                 </p>
               </div>
-
             </div>
           </div>
         </div>
-      </div>
-    </section>
 
-    <section class="card">
-      <div class="hd">
-        <h3>Market data (external)</h3>
-        <div class="small">Opens in new tab.</div>
-      </div>
-      <div class="bd">
-        <div class="linkgrid">
-          <div class="linkcard">
-            <p class="t"><a target="_blank" rel="noreferrer noopener" href="https://coinmarketcap.com/">CoinMarketCap</a></p>
-            <p class="m">Crypto prices, charts, and market cap listings.</p>
-            <p class="meta">Use for symbol verification and pricing history.</p>
+        <section class="card" style="margin-top:32px;">
+          <div class="hd">
+            <h3>Market Data Feeds (External)</h3>
+            <div class="small">Links to independent market data providers (opens in new tab).</div>
           </div>
-          <div class="linkcard">
-            <p class="t"><a target="_blank" rel="noreferrer noopener" href="https://www.tradingview.com/">TradingView</a></p>
-            <p class="m">Charts and watchlists for multi-asset monitoring.</p>
-            <p class="meta">Useful for screenshots in an investigation scene.</p>
+          <div class="bd">
+            <div class="linkgrid">
+              <div class="linkcard">
+                <p class="t"><a target="_blank" rel="noreferrer noopener" href="https://coinmarketcap.com/">CoinMarketCap</a></p>
+                <p class="m">Crypto prices, charts, and market cap listings.</p>
+                <p class="meta">Use for symbol verification and pricing history.</p>
+              </div>
+              <div class="linkcard">
+                <p class="t"><a target="_blank" rel="noreferrer noopener" href="https://www.tradingview.com/">TradingView</a></p>
+                <p class="m">Charts and watchlists for multi-asset monitoring.</p>
+                <p class="meta">Useful for screenshots in an investigation scene.</p>
+              </div>
+              <div class="linkcard">
+                <p class="t"><a target="_blank" rel="noreferrer noopener" href="https://www.investing.com/">Investing.com</a></p>
+                <p class="m">Global markets overview (indices, FX, commodities).</p>
+                <p class="meta">Cross-check with primary sources where possible.</p>
+              </div>
+              <div class="linkcard">
+                <p class="t"><a target="_blank" rel="noreferrer noopener" href="https://www.investopedia.com/">Investopedia</a></p>
+                <p class="m">Financial education and market news coverage.</p>
+                <p class="meta">Used as an RSS source on the News page.</p>
+              </div>
+            </div>
           </div>
-          <div class="linkcard">
-            <p class="t"><a target="_blank" rel="noreferrer noopener" href="https://www.investing.com/">Investing.com</a></p>
-            <p class="m">Global markets overview (indices, FX, commodities).</p>
-            <p class="meta">Cross-check with primary sources where possible.</p>
+        </section>
+
+        <section class="dark-support-banner">
+          <h3>Global Support & Compliance Channels</h3>
+          <p>Public directory entries, procedural bulletins, withdrawal guidance, and external news relay for market context are provided above. For operational matters, please route inquiries to the appropriate department.</p>
+          <div class="support-grid-dark">
+            <div class="support-card-dark"><h4>Technical Support</h4><div data-support-email></div></div>
+            <div class="support-card-dark"><h4>Compliance Department</h4><div data-compliance-email></div></div>
+            <div class="support-card-dark"><h4>Service Type</h4><div>Informational Portal</div></div>
+            <div class="support-card-dark"><h4>System Build</h4><div data-build></div></div>
           </div>
-          <div class="linkcard">
-            <p class="t"><a target="_blank" rel="noreferrer noopener" href="https://www.investopedia.com/">Investopedia</a></p>
-            <p class="m">Financial education and market news coverage.</p>
-            <p class="meta">Used as an RSS source on the News page.</p>
-          </div>
-        </div>
+        </section>
       </div>
     </section>
 
     <footer class="footer">
       <div class="container">
-
         <div class="footer-top">
           <div class="footer-contacts">
-            Support: <a href="mailto:support@trading-center.me">support@trading-center.me</a> •
-            Compliance: <a href="mailto:compliance@trading-center.me">compliance@trading-center.me</a>
+            Support: <span data-support-email></span> •
+            Compliance: <span data-compliance-email></span>
           </div>
-          <div class="small">Referenced institutions / market infrastructure (informational)</div>
+          <div class="small" style="color: #b0c4d6;">Referenced institutions / market infrastructure (informational)</div>
         </div>
-
         <div class="ticker" aria-label="Referenced institutions logo ticker">
           <div class="ticker-track">
             <span class="ticker-item"><img alt="Visa" src="https://commons.wikimedia.org/wiki/Special:FilePath/Visa%202021.svg"></span>
@@ -129,8 +165,6 @@
             <span class="ticker-item"><img alt="Stripe" src="https://commons.wikimedia.org/wiki/Special:FilePath/Stripe%20Logo,%20revised%202016.svg"></span>
             <span class="ticker-item"><img alt="Reuters" src="https://commons.wikimedia.org/wiki/Special:FilePath/Reuters%20Logo.svg"></span>
             <span class="ticker-item"><img alt="Bloomberg" src="https://commons.wikimedia.org/wiki/Special:FilePath/Bloomberg%20logo.svg"></span>
-            <span class="ticker-item"><img alt="CoinMarketCap" src="https://commons.wikimedia.org/wiki/Special:FilePath/Coinmarketcap%20svg%20logo.svg"></span>
-
             <span class="ticker-item"><img alt="Visa" src="https://commons.wikimedia.org/wiki/Special:FilePath/Visa%202021.svg"></span>
             <span class="ticker-item"><img alt="Mastercard" src="https://commons.wikimedia.org/wiki/Special:FilePath/Mastercard%202019%20logo.svg"></span>
             <span class="ticker-item"><img alt="SWIFT" src="https://commons.wikimedia.org/wiki/Special:FilePath/SWIFT%202021%20logo.svg"></span>
@@ -138,19 +172,15 @@
             <span class="ticker-item"><img alt="Stripe" src="https://commons.wikimedia.org/wiki/Special:FilePath/Stripe%20Logo,%20revised%202016.svg"></span>
             <span class="ticker-item"><img alt="Reuters" src="https://commons.wikimedia.org/wiki/Special:FilePath/Reuters%20Logo.svg"></span>
             <span class="ticker-item"><img alt="Bloomberg" src="https://commons.wikimedia.org/wiki/Special:FilePath/Bloomberg%20logo.svg"></span>
-            <span class="ticker-item"><img alt="CoinMarketCap" src="https://commons.wikimedia.org/wiki/Special:FilePath/Coinmarketcap%20svg%20logo.svg"></span>
           </div>
         </div>
-
         <div class="footer-bottom">
-          <div>© Trading Centre — Compliance Information Service</div>
-          <div>Build: <code>TC-OPS-REL-2409.17</code></div>
+          <div>© Trading Center — Compliance Information Service</div>
+          <div data-build></div>
         </div>
-
       </div>
     </footer>
   </main>
-
-  <script src="assets/app.js"></script>
+  <script src="assets/apps.js"></script>
 </body>
 </html>
