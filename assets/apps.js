@@ -25,6 +25,38 @@ function mountHeaderBits(){
   $all("[data-compliance-email]").forEach(el => el.textContent = ITC.email_compliance);
 }
 
+/* -------- Mobile Hamburger Menu (Auto-Injected) -------- */
+function initMobileMenu() {
+  const header = document.querySelector('header.container');
+  const nav = document.querySelector('.nav');
+  if(!header || !nav) return;
+
+  // 1. Create the button
+  const menuBtn = document.createElement('button');
+  menuBtn.className = 'hamburger-menu';
+  menuBtn.setAttribute('aria-label', 'Toggle Navigation');
+  
+  // Default Hamburger Icon (3 lines)
+  const iconBars = `<svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>`;
+  // Close Icon (X)
+  const iconClose = `<svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>`;
+
+  menuBtn.innerHTML = iconBars;
+
+  // 2. Add it to the header
+  header.appendChild(menuBtn);
+
+  // 3. Add click event to open/close menu and swap icon
+  menuBtn.addEventListener('click', () => {
+    nav.classList.toggle('open');
+    if(nav.classList.contains('open')) {
+      menuBtn.innerHTML = iconClose;
+    } else {
+      menuBtn.innerHTML = iconBars;
+    }
+  });
+}
+
 /* -------- RSS news (auto) -------- */
 async function fetchTextViaProxy(url){
   const prox = "https://api.allorigins.win/raw?url=" + encodeURIComponent(url);
@@ -64,7 +96,6 @@ async function mountAutoNews(targetSel){
   const status = $("#newsStatus");
   try{
     if(status) status.textContent = "Updating headlines…";
-
     const merged = [];
     for(const f of ITC.feeds){
       const xml = await fetchTextViaProxy(f.url);
@@ -80,7 +111,6 @@ async function mountAutoNews(targetSel){
         });
       });
     }
-
     merged.sort((a,b)=> (b.date||"").localeCompare(a.date||""));
     renderNotices(targetSel, merged.slice(0,12));
     if(status) status.textContent = "Live headlines loaded (RSS).";
@@ -100,4 +130,5 @@ async function mountAutoNews(targetSel){
 document.addEventListener("DOMContentLoaded", ()=>{
   mountHeaderBits();
   mountAutoNews("#newsList");
+  initMobileMenu(); /* Trigger the new menu! */
 });
