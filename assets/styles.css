@@ -59,11 +59,31 @@ hr{border:none;border-top:1px solid var(--line);margin:16px 0}
   box-shadow:0 0 0 3px rgba(0,174,239,.3);
 }
 
-header{padding:24px 0 0}
+/* Header */
+header.container { position: relative; padding:24px 0 0; } /* Set relative for the hamburger button */
 .brand{display:flex;align-items:center;gap:16px}
 h1{margin:0;font-size:26px;letter-spacing:0.5px; text-transform: uppercase; font-weight: 800; color: var(--ink); display: none;} 
 .sub{margin:4px 0 0;color:var(--muted);font-size:13.5px;line-height:1.4; font-family: var(--mono);}
 
+/* Hamburger Button Base (Hidden on Desktop) */
+.hamburger-menu {
+  display: none; 
+  position: absolute;
+  top: 24px; /* Aligns with header padding */
+  right: 18px; /* Aligns with container padding */
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 8px;
+  color: var(--ink);
+  cursor: pointer;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0,57,93,0.05);
+  transition: background 0.2s;
+}
+.hamburger-menu:hover { background: #f0f5f9; }
+
+/* Navigation */
 .nav{
   margin-top:24px;
   display:flex;flex-wrap:wrap;gap:8px;
@@ -231,27 +251,49 @@ h1{margin:0;font-size:26px;letter-spacing:0.5px; text-transform: uppercase; font
   /* Fix Topbar */
   .topbar .row { flex-direction: column; align-items: flex-start; gap: 8px; }
   
-  /* Fix Header & Logo Scaling */
-  .brand { flex-direction: column; gap: 8px; }
-  .brand .logo { width: 100% !important; max-width: 320px !important; height: auto !important; }
+  /* Fix Header & Show Hamburger */
+  .brand { flex-direction: column; gap: 8px; align-items: flex-start !important; padding-right: 50px; }
+  .brand .logo { width: 100% !important; max-width: 280px !important; height: auto !important; }
   .brand .logo svg { height: auto !important; }
   
-  /* Swipeable Navigation Bar */
+  .hamburger-menu { display: flex; align-items: center; justify-content: center; }
+
+  /* Turn Nav into a Dropdown Menu */
   .nav { 
-    flex-wrap: nowrap !important; 
-    overflow-x: auto; 
-    -webkit-overflow-scrolling: touch; 
-    padding-bottom: 12px; 
+    display: none !important; /* Hidden by default */
+    flex-direction: column !important; 
+    width: 100%;
+    margin-top: 16px;
+    padding: 0 !important;
+    background: transparent;
+    box-shadow: none;
+    border: none;
   }
-  .nav::-webkit-scrollbar { height: 4px; }
-  .nav::-webkit-scrollbar-thumb { background: var(--line); border-radius: 4px; }
+  .nav.open {
+    display: flex !important; /* Shows when JS adds '.open' class */
+    animation: fadeInDown 0.2s ease forwards;
+  }
+  .nav a {
+    width: 100%;
+    text-align: center;
+    padding: 14px !important;
+    background: var(--card);
+    border: 1px solid var(--line);
+    margin-bottom: 6px;
+    border-radius: 6px;
+  }
+  
+  @keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
   
   /* Reduce Padding & Banner Sizes */
   .hero .inner { padding: 16px; }
   .hero-banner { height: 160px !important; }
   .photo-full img, .photo img { max-height: 250px; }
   
-  /* Stack Grids - THIS IS THE CRITICAL FIX */
+  /* Stack Grids */
   .grid { grid-template-columns: 1fr !important; }
   .callouts { grid-template-columns: 1fr !important; }
   .text-columns { column-count: 1 !important; }
