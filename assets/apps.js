@@ -1,7 +1,7 @@
 const ITC = {
   build: "TC-OPS-REL-2409.17",
-  email_support: "support@trading-center.me",
-  email_compliance: "compliance@trading-center.me",
+  email_support: "support@tradingcentre.me",
+  email_compliance: "compliance@tradingcentre.me",
 
   feeds: [
     { name: "Investopedia", url: "https://www.investopedia.com/rss/news.rss" },
